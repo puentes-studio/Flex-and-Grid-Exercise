@@ -1,0 +1,192 @@
+@import url(/base.css);
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: #00adad;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}
+
+header input {
+    border: 1px solid #00adad;
+    border-radius: 0;
+
+}
+
+header form {
+    display: flex;
+}
+
+header button {
+    border: none;
+    padding: 3px;
+    background: linear-gradient(0deg, rgb(1, 116, 116) 0%, rgb(95, 253, 253) 100%);
+    color: rgb(232, 252, 252);
+}
+
+header button:hover {
+    border: none;
+    padding: 3px;
+    background: rgb(232, 252, 252);
+    color: rgb(1, 116, 116);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+header ul li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+header img.icon-size {
+    height: 20px;
+}
+
+section ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    height: 2rem;
+    border-top: 1px solid #00adad;
+    margin: 0;
+}
+
+section a {
+    color: #00adad;
+    text-decoration: none;
+}
+
+section a:hover {
+    background-color: rgb(232, 252, 252);
+  }
+
+main {
+    background-color: rgb(232, 252, 252);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid #00adad;
+  
+  }
+  
+  article img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: contain;
+  }
+  
+  
+  article h2{
+    margin: 2px 0;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+
+    min-height: 2rem;
+  
+    /* Para que la linea se coloque en su lugar */
+    position: relative;
+  }
+  
+  .description {
+    color: hsl(0, 0%, 26%);
+    font-size: 0.8rem;
+    padding-left: 10px;
+    margin: 0;
+    min-height: 4rem;
+  }
+  
+  .price {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 26%);
+    margin: 0;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 2rem;
+    background-color: #ffffff;
+    margin: 0;
+  }
+
+  footer a {
+    color: #00adad;
+    font-size: 14px;
+  }
+
+  footer a:hover {
+    background-color: rgb(232, 252, 252);
+  }
+
+  @media (min-width: 600px){
+
+    body {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 5rem 1fr 2rem;
+        grid-template-areas: 
+        "header header"
+        "section main"
+        "footer footer"
+        ;
+    }
+
+    header {
+        grid-area: header;
+        flex-direction: row;
+        height: 5rem;
+        justify-content: space-between;
+    }
+
+    section {
+        grid-area: section;
+    }
+
+    section ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: normal;
+    }
+
+    
+
+  main {
+    grid-area: main;
+    border-top: 1px solid #00adad;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1.5rem;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+  }
